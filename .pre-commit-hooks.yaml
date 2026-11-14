@@ -1,8 +1,12 @@
-- id: shellcheck
-  name: shellcheck
-  description: Test shell scripts with shellcheck
-  entry: shellcheck
+- id: google-java-format
+  name: google-java-format
+  description: Format Java source files with Google Style
+  entry: google-java-format --replace
   language: python
-  types: [shell]
-  exclude_types: [zsh]
-  require_serial: true # shellcheck can detect sourcing this way
+  types: [java]
+- id: google-java-format-aosp
+  name: google-java-format-aosp
+  description: Format Java source files with AOSP Style (4-space indentation)
+  entry: google-java-format --replace --aosp
+  language: python
+  types: [java]
